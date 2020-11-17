@@ -7,10 +7,10 @@ Rails.application.routes.draw do
   post 'tasks', to: 'tasks#create'
   # READ - all tasks
   get 'tasks', to: 'tasks#list'
-  # READ - one task
-  get 'tasks/:id', to: 'tasks#show', as: :task
   # UPDATE - get filled-in form
   get 'tasks/:id/edit', to: 'tasks#edit', as: :edit_task
+  # READ - one task
+  get 'tasks/:id', to: 'tasks#show', as: :task
   # UPDATE - receive updated form
   patch 'tasks/:id', to: 'tasks#update'
   # DELETE a single record
